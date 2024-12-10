@@ -1,0 +1,22 @@
+*{
+    background-color: rgb(242, 236, 236);
+    font-size: 100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+.login{
+    margin-top: 250px;
+    
+}
+.form{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px; 
+    box-sizing: content-box;
+    
+}
+h1{
+    font-size: 30px;
+    justify-content: center;
+    display: flex;
+}
