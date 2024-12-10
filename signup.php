@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include 'datab.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
         $stmt = $pdo->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
         $stmt->execute([$username, $password]);
-        header('Location: index.php');
+        header('Location: home.php');
         exit;
     } catch (PDOException $e) {
         $error = "Username already exists!";
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input type="password" name="password" required><br>
         <input type="submit" value="Sign Up">
     </form>
-    <p>Already have an account? <a href="index.php">Login</a></p>
+    <p>Already have an account? <a href="home.php">Login</a></p>
 </div>
 </body>
 </html>
